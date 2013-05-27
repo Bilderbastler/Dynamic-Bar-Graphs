@@ -1,3 +1,4 @@
+// starting the App Object
 require([
 	'app',
 	], function(App){

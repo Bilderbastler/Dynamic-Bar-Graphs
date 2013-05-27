@@ -1,3 +1,6 @@
+// setup up all moodules for require js
+// will go to "main" afterwards
+
 "use strict";
 
 requirejs.config({
