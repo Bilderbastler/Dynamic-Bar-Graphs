@@ -1,11 +1,16 @@
-// starting the App Object
-require([
-	'app',
-	], function(App){
+// load configuration for requirejs
+require(['config'], function(){
 	
-	'use strict';
+	// load the app
+	require([
+		'app'
+		], function(App){
 	
-	App.init();
+		'use strict';
 	
+		App.init();
+	
+	});
 });
+
 
