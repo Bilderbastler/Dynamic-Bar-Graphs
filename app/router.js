@@ -1,9 +1,10 @@
 // The Router will render a view that coresponds to a route
 define([
-	'backbone'
+	'backbone',
+	'views/helloWorld'
 ],
 
-function(Backbone) {
+function(Backbone, HelloWorldView) {
 
   var Router = Backbone.Router.extend({
     routes: {
@@ -15,7 +16,8 @@ function(Backbone) {
     },
 
     helloAction: function() {
-			console.log('Hello World');
+			helloWorldView = new HelloWorldView;
+			helloWorldView.render();
     },
 		
 		singlePostAction : function (id) {
