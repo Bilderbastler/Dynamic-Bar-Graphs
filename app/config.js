@@ -12,7 +12,7 @@ requirejs.config({
 		'jquery': '../libs/jquery/jquery',
 		'underscore' : '../libs/underscore/underscore',
 		'text' : '../libs/backbone/text',
-		'bootstrap' : '../libs/bootstrap/bootstrap'
+		'bootstrap' : '../libs/bootstrap/bootstrap',
 	},
 	
   shim: {

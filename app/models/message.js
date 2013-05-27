@@ -7,15 +7,15 @@ define([
 	var Message = Backbone.Model.extend({
 	  defaults: {
 	    text: "Hello World"
-	  }
+	  },
 		
-		initialize: function () {
+		initialize : function () {
 			// example of event listening
 			this.bind('change:text', function() {
 				console.log('this model has changed');
 			});
 			
-		}
+		},
 		
 		validate: function (attributes) {
 			if(attributes.text == ""){
