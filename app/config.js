@@ -11,6 +11,7 @@ requirejs.config({
 		'backbone' : '../libs/backbone/backbone',
 		'jquery': '../libs/jquery/jquery',
 		'underscore' : '../libs/underscore/underscore',
+		'text' : '../libs/backbone/text',
 		'bootstrap' : '../libs/bootstrap/bootstrap'
 	},
 	
@@ -28,7 +29,7 @@ requirejs.config({
 			'jquery' : {
 				'exports' : '$'
 			},
-			'bootstrap' : ['jquery']
+			'bootstrap' : ['jquery'],
   }
 	
 });

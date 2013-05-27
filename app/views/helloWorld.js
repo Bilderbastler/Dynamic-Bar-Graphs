@@ -1,7 +1,8 @@
 define([
 	'jquery', 
 	'underscore', 
-	'backbone'
+	'backbone',
+	'text!templates/helloWorld.html'
 	], function($, _, Backbone){
 	
 	"use strict";
