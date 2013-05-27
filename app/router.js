@@ -1,9 +1,10 @@
 define([
   // Application.
-  "app"
+  "app",
+	"backbone"
 ],
 
-function(app) {
+function(app, Backbone) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({

@@ -1,7 +1,7 @@
 /*-- HTML5 Boilerplate. -----------------------------------------------------*/
 
-@import "../../vendor/h5bp/css/normalize.css";
-@import "../../vendor/h5bp/css/main.css";
+@import "normalize.css";
+@import "main.css";
 @import "bootstrap.css";
 
 /*-- Application stylesheets. -----------------------------------------------*/
