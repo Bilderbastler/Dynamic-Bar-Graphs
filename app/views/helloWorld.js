@@ -31,7 +31,5 @@ define([
 		}
 	});
 	
-	
-	
 	return HelloWorld;
 });
