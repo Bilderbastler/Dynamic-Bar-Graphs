@@ -3,7 +3,7 @@ define([
 	'underscore', 
 	'backbone',
 	'text!templates/helloWorld.html'
-	], function($, _, Backbone){
+	], function($, _, Backbone, viewTemplate){
 	
 	"use strict";
 	
@@ -12,7 +12,7 @@ define([
 	  el: '#main',
 	  
 	  events: {
-	     'click button#HelloButton': 'doGreet'
+	     'click #HelloButton': 'doGreet'
 	  },
 	  
 	  initialize: function(){
@@ -21,12 +21,13 @@ define([
 	  },
 	  
 	  render: function(){
-	    $(this.el).append("<ul> <li>hello world</li> </ul>");
+			var compiledTemplate = _.template(viewTemplate, {message_text : '...'});
+	    $(this.el).append(compiledTemplate);
 	  },
 		
 		// custom event handler methods:
-		doGreet : function (args) {
-			
+		doGreet : function () {
+			$('#message').text('Hello World');
 		}
 	});
 	
