@@ -1,11 +1,16 @@
 define([
-	'Underscore', 
-	'Backbone'
-	], function($, _, Backbone){
+	'backbone',
+	'router'
+	], function(Backbone, Router){
 	
 	"use strict";
 	
-	var App = {};
+	var App = {
+		init : function () {
+			App.router = new Router;
+			Backbone.history.start();
+		}
+	};
 	
 	return App;
 });
