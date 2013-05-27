@@ -10,6 +10,10 @@ define([
 	  }
 		
 		initialize: function () {
+			// example of event listening
+			this.bind('change:text', function() {
+				console.log('this model has changed');
+			});
 			
 		}
 		
