@@ -14,7 +14,7 @@ define([
     
 	    it("should create a a view", function() {
 	      this.view.render();
-				expect(this.view.el.innerHTML).toContain('<label>');
+				expect(this.view.el.innerHTML).toContain('<label');
 	    });
     
 	  });
