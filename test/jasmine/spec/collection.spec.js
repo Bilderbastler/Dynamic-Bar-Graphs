@@ -4,7 +4,8 @@ define([
 	
 	"use strict";
 	
-	describe("when instantiated with model literal", function() {
+	describe("a collection instantiated with model literal", function() {
+		
 	  beforeEach(function() {
 	    this.model =  Backbone.Model.extend();
 	    this.messaages = new Messages;
@@ -15,7 +16,6 @@ define([
 	    }]);
 	  });
     
-
 
 	  it("should add a model", function() {
 	    expect(this.messaages.length).toEqual(1);

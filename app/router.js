@@ -12,7 +12,7 @@ function(Backbone, HelloWorldView) {
 			'post/:id' : 'singlePostAction',
 			'showURL' : 'splatAction',
 			
-			'*actions' : 'defaultAction'
+			'*actions' : 'default'
     },
 
     helloAction: function() {
@@ -31,7 +31,7 @@ function(Backbone, HelloWorldView) {
 		
 		
 		
-		defaultAction : function () {
+		default : function () {
 			console.log('There is nothing here to see. Sorry!');
 		}
 	

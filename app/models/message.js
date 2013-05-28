@@ -11,8 +11,12 @@ define([
 		
 		initialize : function () {
 			// example of event listening
-			this.bind('change:text', function() {
+			this.bind('change:text', function(model, newValue) {
 				console.log('this model has changed');
+			});
+			
+			this.bind('invalid', function(model, error){
+				console.log('validation failed');
 			});
 			
 		},

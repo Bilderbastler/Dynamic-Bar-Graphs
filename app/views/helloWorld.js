@@ -9,8 +9,13 @@ define([
 	"use strict";
 	
 	var HelloWorld = Backbone.View.extend({
-	  // attaches -: line 4: this.el: command not found to an existing element.
-	  el: '#main',
+		
+		// specifiy html element for this view, element can be accessed via this.el
+	  id: 'main',
+		//tagName: 'div',
+		//className: 'box',
+		//attributes: { "data-attr": "some Data" },
+
 	  
 	  events: {
 	     'click #HelloButton': 'doGreet'

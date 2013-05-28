@@ -4,29 +4,22 @@ define([
 	
 	"use strict";
 	
-	describe("HelloWorldView", function() {
+	describe("a View", function() {
   
 	  beforeEach(function() {
-	    this.view = new View();
+	    this.view = new View;
 	  });
   
 	  describe("Instantiation", function() {
     
-	    it("should create a ...", function() {
-	      //expect(this.view.el.nodeName).toEqual("UL");
+	    it("should create a a view", function() {
+	      this.view.render();
+				expect(this.view.el.innerHTML).toContain('<label>');
 	    });
     
 	  });
   
 	});
 	
-	describe('Error Throwing', function(){
-		it("should throw an error", function(){
-			expect(function () {
-					throw new Error("Unexpected error!")
-		    }).toThrow(new Error("Unexpected error!"));
-			})
-			
-		});
-	});
+});
 
