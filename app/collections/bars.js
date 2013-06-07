@@ -6,7 +6,9 @@ define([
 	"use strict";
 	
 	var Bars = Backbone.Collection.extend({
-	  model: Bar
+	  model: Bar,
+		
+		 //localStorage: new Backbone.LocalStorage("backbone.bars")
 		
 		// server connection
 		//url : '/bars',

@@ -1,16 +1,20 @@
 // The Router will render a view that coresponds to a route
 define([
 	'backbone'
-	//,	'views/helloWorld'
+	,	'views/BarEditor'
 ],
 
-function(Backbone) {
+function(Backbone, BarEditorView) {
 
   var Router = Backbone.Router.extend({
     routes: {
+			/*
       'helloWorld': 'helloAction',
 			'post/:id' : 'singlePostAction',
 			'showURL' : 'splatAction',
+			*/
+			
+			'' : 'doGraphEditor',
 			
 			'*actions' : 'default'
     },
@@ -19,9 +23,15 @@ function(Backbone) {
 			helloWorldView = new HelloWorldView;
 			helloWorldView.render();
     },
-		
 		*/
 		
+		doGraphEditor : function () {
+			var view = new BarEditorView();
+			view.render();
+		},
+		
+		
+		/*
 		singlePostAction : function (id) {
 			// takes an argument from the url "#post/4"
 		},
@@ -30,7 +40,7 @@ function(Backbone) {
 			// will take all elements after the matching url as a single argument
 			// e.g. "#showURL/foo/bar" => args = "foo/bar"
 		},
-		
+		*/
 		
 		
 		default : function () {

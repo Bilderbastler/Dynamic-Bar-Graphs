@@ -13,6 +13,7 @@ define([], function(){
 			'underscore' : '../libs/underscore/underscore',
 			'text' : '../libs/backbone/text',
 			'handlebars' : '../libs/handlebars/handlebars',
+			'localstorage' : '../libs/backbone/backbone.localStorage-min',
 			'bootstrap' : '../libs/bootstrap/bootstrap'
 		},
 	
@@ -31,11 +32,14 @@ define([], function(){
 					'exports' : '$'
 				},
 				'bootstrap' : ['jquery'],
-				'hadnlebars' : {
+				'handlebars' : {
 					'exports' : 'Handlebars'
-				}
+				},
 				'app' : ['backbone']
 	  }
+		
+		// prevent caching during developement
+		//urlArgs: "bust=" + (new Date()).getTime()
 	
 	});
 	
