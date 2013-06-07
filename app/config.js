@@ -12,6 +12,7 @@ define([], function(){
 			'jquery': '../libs/jquery/jquery',
 			'underscore' : '../libs/underscore/underscore',
 			'text' : '../libs/backbone/text',
+			'handlebars' : '../libs/handlebars/handlebars',
 			'bootstrap' : '../libs/bootstrap/bootstrap'
 		},
 	
@@ -30,6 +31,9 @@ define([], function(){
 					'exports' : '$'
 				},
 				'bootstrap' : ['jquery'],
+				'hadnlebars' : {
+					'exports' : 'Handlebars'
+				}
 				'app' : ['backbone']
 	  }
 	

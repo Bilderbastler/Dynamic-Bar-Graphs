@@ -6,7 +6,9 @@ define([
 	
 	var Bar = Backbone.Model.extend({
 	  defaults: {
-	    height: 1
+	    height : 1,
+			name :  "new",
+			order : 0 // order in a graph starting from 0	
 	  },
 		
 		initialize : function () {

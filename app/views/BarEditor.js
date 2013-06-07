@@ -2,9 +2,9 @@ define([
 	'jquery', 
 	'underscore', 
 	'backbone',
-	'text!templates/helloWorld.html',
-	'collections/messages'
-	], function($, _, Backbone, viewTemplate, Messages){
+	'text!templates/BarEditor.html',
+	'collections/bars'
+	], function($, _, Backbone, viewTemplate, Bars){
 	
 	"use strict";
 	
@@ -18,17 +18,14 @@ define([
 
 	  
 	  events: {
-	     'click #HelloButton': 'doGreet'
+	     'click #AddBarButton': 'doAdd'
 	  },
 	  
 	  initialize: function(){
 			//automaticly show this view
 	    //this.render();
 			
-			this.collection = new Messages([
-				{text : '...'},
-				{text : 'Hello World'}
-				]);
+			this.collection = new Bars();
 				// load data from server
 				//this.collection.fetch();
 			
@@ -41,11 +38,11 @@ define([
 	  },
 		
 		// custom event handler methods:
-		doGreet : function () {
+		doAdd : function () {
 			var message = this.collection.last();
 			$('#message').text(message.get('text'));
 		}
 	});
 	
-	return HelloWorld;
+	return BarEditor;
 });
