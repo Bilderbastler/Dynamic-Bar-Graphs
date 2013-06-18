@@ -7,50 +7,26 @@ define([
 function(Backbone, BarEditorView) {
 
   var Router = Backbone.Router.extend({
+		
     routes: {
-			/*
-      'helloWorld': 'helloAction',
-			'post/:id' : 'singlePostAction',
-			'showURL' : 'splatAction',
-			*/
-			
 			'' : 'showGraphEditor',
-			
 			'*actions' : 'error'
     },
-		/*
-    helloAction: function() {
-			helloWorldView = new HelloWorldView;
-			helloWorldView.render();
-    },
-		*/
+		
+		initialize: function () {
+			this.editorView = new BarEditorView();
+		},
 		
 		showGraphEditor : function () {
-			var view = new BarEditorView();
-			view.render();
+			this.editorView.render();
 		},
-		
-		
-		/*
-		singlePostAction : function (id) {
-			// takes an argument from the url "#post/4"
-		},
-		
-		splatAction : function (args) {
-			// will take all elements after the matching url as a single argument
-			// e.g. "#showURL/foo/bar" => args = "foo/bar"
-		},
-		*/
-		
-		
+
 		error : function () {
 			console.log('There is nothing here to see. Sorry!');
 		}
 	
   });
 	
-	
-
   return Router;
 
 });

@@ -22,7 +22,7 @@ define([
 		  Backbone.history.stop();
 		});
   
-	  it("fires the index route with a blank hash", function() {
+	  it("fires the editor action with a blank hash", function() {
 	    this.router.bind("route:showGraphEditor", this.routeSpy);
 	    this.router.navigate("", true);
 	    expect(this.routeSpy).toHaveBeenCalled();
@@ -34,6 +34,14 @@ define([
 	    expect(this.routeSpy).toHaveBeenCalled();
 	    expect(this.routeSpy).toHaveBeenCalledWith("asdfjk");
 	  });
+		
+		it("renders the editor", function(){
+			var viewSpy = this.router.editorView;
+			spyOn(viewSpy, "render");
+			this.router.navigate("", true);
+			expect(this.router.editorView).toBeDefined();
+			expect(viewSpy.render).toHaveBeenCalled();
+		});
 	});
 	
 });
