@@ -14,9 +14,9 @@ function(Backbone, BarEditorView) {
 			'showURL' : 'splatAction',
 			*/
 			
-			'' : 'doGraphEditor',
+			'' : 'showGraphEditor',
 			
-			'*actions' : 'default'
+			'*actions' : 'error'
     },
 		/*
     helloAction: function() {
@@ -25,7 +25,7 @@ function(Backbone, BarEditorView) {
     },
 		*/
 		
-		doGraphEditor : function () {
+		showGraphEditor : function () {
 			var view = new BarEditorView();
 			view.render();
 		},
@@ -43,7 +43,7 @@ function(Backbone, BarEditorView) {
 		*/
 		
 		
-		default : function () {
+		error : function () {
 			console.log('There is nothing here to see. Sorry!');
 		}
 	

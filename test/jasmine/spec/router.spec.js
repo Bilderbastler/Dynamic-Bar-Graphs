@@ -23,10 +23,16 @@ define([
 		});
   
 	  it("fires the index route with a blank hash", function() {
-	    this.router.bind("route:default", this.routeSpy);
+	    this.router.bind("route:showGraphEditor", this.routeSpy);
 	    this.router.navigate("", true);
 	    expect(this.routeSpy).toHaveBeenCalled();
-	    expect(this.routeSpy).toHaveBeenCalledWith(null);
+	  });
+		
+	  it("fires the error route with a random hash", function() {
+	    this.router.bind("route:error", this.routeSpy);
+	    this.router.navigate("asdfjk", true);
+	    expect(this.routeSpy).toHaveBeenCalled();
+	    expect(this.routeSpy).toHaveBeenCalledWith("asdfjk");
 	  });
 	});
 	
